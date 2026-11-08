@@ -212,7 +212,7 @@ summary { cursor: pointer; font-weight: 500; }
 .fix .got { color: var(--miss); text-shadow: none; }
 .fix .exp { color: var(--hit); font-size: .42em; margin-top: .14em; padding-top: .14em; border-top: 1px solid currentColor; text-shadow: none; }
 .topline { display: flex; justify-content: flex-end; }
-.story { margin: 0; padding-inline: clamp(10px, 5vw, 44px); font: 400 clamp(14px, 1.9vw, 16.5px)/1.75 var(--soft); max-width: 62ch; display: flex; flex-direction: column; gap: 1em; }
+.story { margin: 0; padding-inline: clamp(10px, 5vw, 44px); font: 400 clamp(14px, 1.9vw, 16.5px)/1.75 var(--soft); max-width: 62ch; margin-inline: auto; display: flex; flex-direction: column; gap: 1em; }
 .story p { margin: 0; }
 .intro-ov { position: fixed; inset: 0; z-index: 50; overflow-y: auto; display: flex; background: rgba(94, 63, 46, .42);
   padding-block: max(56px, calc(env(safe-area-inset-top, 0px) + 40px)) max(48px, calc(env(safe-area-inset-bottom, 0px) + 32px));
@@ -305,6 +305,7 @@ h1, .endtitle { font-family: var(--type); font-weight: 400; }
 .app.in-play .lang-btn { display: none; }
 .lang-inline { display: none !important; }
 #langBtn { top: max(30px, calc(env(safe-area-inset-top, 0px) + 28px)); background: var(--bg); }
+#langBtn { left: max(64px, env(safe-area-inset-left, 0px)); }
 #langBtn:hover { background: var(--strong); }
 .about-title { margin: 14px 0 -2px; }
 .about { --apad: clamp(16px, 4vw, 30px); --gut: clamp(90px, 11vw, 150px); display: flow-root; margin: 0 0 40px; padding: var(--apad); padding-block-start: 56px; background: var(--strong); color: var(--bg); border-radius: 22px; position: relative; }
@@ -317,7 +318,7 @@ h1, .endtitle { font-family: var(--type); font-weight: 400; }
 .about-credit b { font: 700 16px/1.4 var(--display); opacity: 1; }
 .app.in-menu::before { content: ""; position: fixed; z-index: 58; top: 0; left: 0; right: 0; height: calc(env(safe-area-inset-top, 0px) + 98px); background: linear-gradient(var(--bg) 60%, rgba(210, 241, 98, 0)); pointer-events: none; }
 .app.intro-open::before { display: none; }
-.app[dir="ltr"].in-menu #langBtn { left: auto; right: max(14px, env(safe-area-inset-right, 0px)); }
+.app[dir="ltr"].in-menu #langBtn { left: auto; right: max(64px, env(safe-area-inset-right, 0px)); }
 .lang-btn, .info-dot { -webkit-tap-highlight-color: transparent; }
 .lang-btn:focus, .info-dot:focus { outline: none; }
 .lang-btn:focus-visible { outline: 2px solid var(--strong); outline-offset: 3px; }
